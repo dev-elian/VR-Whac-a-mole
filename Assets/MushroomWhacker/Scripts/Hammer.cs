@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerReloader : MonoBehaviour
+public class Hammer : MonoBehaviour
 {
     public bool _canCollide;
     public bool CanCollide {
@@ -19,7 +19,7 @@ public class HammerReloader : MonoBehaviour
         _mesh.material = _enabled;
         _canCollide=true;
     }
-    void OnTriggerEnter(Collider other) {
+    public void HammerCrash(Collider other) {
         switch (other.gameObject.tag)
         {
             case Tags.Reloader:

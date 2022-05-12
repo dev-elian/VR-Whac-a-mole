@@ -4,12 +4,13 @@ using UnityEngine;
 
 [System.Serializable]
 public class EnemiesProbability {
-    public GameObject enemy;
+    public EnemyScriptable enemy;
     [Range(0,1)]
     public float probability;
 }
 public class EnemiesInstancer : MonoBehaviour
 {
+    [SerializeField] GameObject enemyPrefab;
     [SerializeField] List<EnemiesProbability> _enemies; 
     [SerializeField] float _timeToSpawn = 1;
     public List<int> _holesWithEnemies;
@@ -33,7 +34,7 @@ public class EnemiesInstancer : MonoBehaviour
     }
 
     IEnumerator InstanceEnemies(){
-        GameObject enemyToInstance = _enemies[0].enemy;
+        EnemyScriptable enemyFeatures = _enemies[0].enemy;
         while (true)
         {
             int selectedHole = Random.Range(0, transform.childCount);
@@ -42,21 +43,22 @@ public class EnemiesInstancer : MonoBehaviour
                 _holesWithEnemies.Add(selectedHole);
                 float rnd = (float)Random.Range(0, 100)/100;
                 for (int i = 0; i < _enemies.Count; i++){
-                    Debug.Log(_enemies[i].probability);
                     if (rnd <= _enemies[i].probability) {
-                        enemyToInstance = _enemies[i].enemy;                    
+                        enemyFeatures = _enemies[i].enemy;                    
                         break;
                     }                   
                 }
-                Enemy x = GameObject.Instantiate(enemyToInstance, transform.GetChild(selectedHole).GetChild(0).position, Quaternion.identity).GetComponent<Enemy>();
+                Enemy x = GameObject.Instantiate(enemyPrefab, transform.GetChild(selectedHole).GetChild(0).position, Quaternion.identity).GetComponent<Enemy>();
                 x.instancer = this;
                 x.hole = selectedHole;
+                x.SetEnemyFeatures(enemyFeatures);
                 yield return new WaitForSeconds(_timeToSpawn);
             }
             else
                 yield return new WaitForSeconds(0.1f);
         }
     }
+
     public void RemoveEnemy(int idxHole){
         _holesWithEnemies.Remove(idxHole);
     }
