@@ -10,58 +10,58 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
-  m_Name: EasyEnemy
+  m_Name: MidEnemy
   m_EditorClassIdentifier: 
   verticalPositionCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      time: 0.1
+      value: -0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.15
-      value: 1
+      value: 1.0026093
       inSlope: 0
       outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.65
+      value: 1.0017196
+      inSlope: -0.0063895686
+      outSlope: -0.0063895686
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.70694464
+      value: 0.3335074
+      inSlope: -4.4073215
+      outSlope: -4.4073215
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.5715401
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.75
-      value: 1.0023584
+      time: 0.8312683
+      value: 0
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 136
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.81647897
-      value: 0.443019
-      inSlope: -6.5559254
-      outSlope: -6.5559254
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.09859161
-    - serializedVersion: 3
-      time: 0.9951691
-      value: 0.0023584906
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  materialForMesh: {fileID: 2100000, guid: 38e7681924061aa479b000a07b8db69d, type: 2}
-  pointsByPunch: 10
+  materialForMesh: {fileID: 2100000, guid: 454cace436225a047a0236e67b95f9e7, type: 2}
+  pointsByPunch: 25

@@ -25,9 +25,7 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator IncreaseScore(){
         yield return new WaitForSeconds(0.1f);
-        Debug.Log("xd");
         if (onPunch != null){
-                Debug.Log("xd2");
             onPunch.Invoke();
         }
         _isKicked = true;
