@@ -23,6 +23,13 @@ public class GameManager : MonoBehaviour
         gameState = GameState.NotStarted;
     }
 
+    //CLEAR DEBUG
+    void Start() {
+        StartGame();
+        // Time.timeScale = 3;
+    }
+    //
+
     [ContextMenu("Start Game")]
     public void StartGame(){
         ChangeState(GameState.InGame);
@@ -43,6 +50,7 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Restart")]
     public void Restart(){
         ChangeState(GameState.NotStarted);
+        Invoke("StartGame", 1.5f);
     }
 
     [ContextMenu("Game Over")]

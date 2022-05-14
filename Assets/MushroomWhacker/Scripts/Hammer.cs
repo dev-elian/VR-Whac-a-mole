@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Hammer : MonoBehaviour
 {
+
+    [Header("DEBUG")]
+    public bool NOT_RELOADING=false;
+
     public bool _canCollide;
     public bool CanCollide {
         get {return _canCollide;}
@@ -19,27 +23,31 @@ public class Hammer : MonoBehaviour
         _canCollide=true;
     }
     public void HammerCrash(Collider other) {
-        switch (other.gameObject.tag)
-        {
-            case Tags.Reloader:
-                _mesh.material = _enabled;
-                _canCollide=true;
-                break;
-            case Tags.Enemy:
-                _mesh.material = _disabled;
-                StartCoroutine(ChangeCollide());
-                break;
-            case Tags.Machine:
-                _mesh.material = _disabled;
-                StartCoroutine(ChangeCollide());
-                break;
-            default:
-                break;
+        if (GameManager.instance.gameState == GameState.InGame){
+            switch (other.gameObject.tag){
+                case Tags.Reloader:
+                    _mesh.material = _enabled;
+                    _canCollide=true;
+                    break;
+                case Tags.Enemy:
+                    _mesh.material = _disabled;
+                    StartCoroutine(ChangeCollide());
+                    break;
+                case Tags.Machine:
+                    _mesh.material = _disabled;
+                    StartCoroutine(ChangeCollide());
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     IEnumerator ChangeCollide(){
         yield return new WaitForSeconds(0.1f);
-        _canCollide=false;
+        //CLEAR DEBUG
+        if (NOT_RELOADING)
+        //
+            _canCollide=false;
     }
 }

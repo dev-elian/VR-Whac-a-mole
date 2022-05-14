@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     int _score=0;
+    bool _pause = false;
     public int score {get=>_score;}
 
     public static ScoreManager instance { get; private set; }
@@ -33,7 +34,13 @@ public class ScoreManager : MonoBehaviour
                 RestartScore();
                 break;
             case GameState.InGame:
-                RestartScore();
+                if (_pause)
+                    _pause = false;
+                else
+                    RestartScore();
+                break;
+            case GameState.Pause:
+                _pause = true;
                 break;
             case GameState.GameOver:
                 SaveScore();

@@ -59,6 +59,7 @@ public class EnemiesInstancer : MonoBehaviour
 
     IEnumerator InstanceEnemies(){
         EnemyScriptable enemyFeatures = _enemies[0].enemy;
+        yield return new WaitForSeconds(2f);
         while (true)
         {
             int selectedHole = Random.Range(0, transform.childCount);
