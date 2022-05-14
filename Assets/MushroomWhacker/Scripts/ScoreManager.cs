@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int _score=0;//
+    int _score=0;
     public int score {get=>_score;}
 
     public static ScoreManager instance { get; private set; }
@@ -51,7 +51,7 @@ public class ScoreManager : MonoBehaviour
         if (GameManager.instance.gameState == GameState.InGame){
             _score += value;
             if (onChangeScore != null)
-                onChangeScore(value);
+                onChangeScore(_score);
         }
     }
 
@@ -59,7 +59,7 @@ public class ScoreManager : MonoBehaviour
         if (GameManager.instance.gameState == GameState.InGame){
             _score -= value;
             if (onChangeScore != null)
-                onChangeScore(value);
+                onChangeScore(_score);
             if (_score<=0){
                 _score = 0;
                 GameManager.instance.GameOver();
