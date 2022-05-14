@@ -6,49 +6,49 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     bool _isKicked;
-    public bool IsKicked {
-        get {return _isKicked;}
-    }
-
     [HideInInspector]
-    public EnemiesInstancer instancer;
+    public EnemiesInstancer instancer {get; private set;}
     [HideInInspector]
-    public int hole;
+    public int hole {get; private set;}
 
     EnemyScriptable _enemyData;
     public Action<EnemyScriptable> onInstanciateEnemy;
     public Action onPunch;
 
+    public void SetInitValues(EnemiesInstancer instancer, int hole, EnemyScriptable data){
+        this.instancer = instancer;
+        this.hole = hole;
+        _enemyData = data;
+        if (onInstanciateEnemy != null)
+            onInstanciateEnemy.Invoke(data);
+    }
+
     void Start(){
         _isKicked = false;
     }
 
-    public IEnumerator IncreaseScore(){
-        yield return new WaitForSeconds(0.1f);
-        if (onPunch != null){
-            onPunch.Invoke();
+    public IEnumerator PunchEnemy(){
+        if (!_isKicked){
+            _isKicked = true;
+            yield return new WaitForSeconds(0.1f);
+            if (onPunch != null){
+                onPunch.Invoke();
+            }
+            ScoreManager.instance.IncreaseScore(_enemyData.pointsByPunch);
+            yield return new WaitForSeconds(0.5f);
+            ClearHole();
         }
-        _isKicked = true;
-        //add points
-        yield return new WaitForSeconds(0.5f);
-        RemoveHole();
     }
 
     public IEnumerator Destroy(){
         yield return new WaitForSeconds(0.1f);
         _isKicked = true;
-        RemoveHole();
+        ClearHole();
     }
 
-    public void RemoveHole(){
+    public void ClearHole(){
         if (instancer != null)
             instancer.RemoveEnemy(hole);
         Destroy(gameObject);
-    }
-
-    public void SetEnemyFeatures(EnemyScriptable data){
-        _enemyData = data;
-        if (onInstanciateEnemy != null)
-            onInstanciateEnemy.Invoke(data);
     }
 }

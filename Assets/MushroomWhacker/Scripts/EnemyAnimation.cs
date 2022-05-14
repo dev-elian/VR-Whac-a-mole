@@ -52,7 +52,7 @@ public class EnemyAnimation : MonoBehaviour
 
     void Remove(){
         Debug.Log("remove");
-        GetComponent<Enemy>().RemoveHole();
+        GetComponent<Enemy>().ClearHole();
         StartCoroutine(_enemy.Destroy());
     }
 

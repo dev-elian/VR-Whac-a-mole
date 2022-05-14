@@ -18,8 +18,32 @@ public class EnemiesInstancer : MonoBehaviour
     void Start(){
         _holesWithEnemies = new List<int>();
         CalculateProbability();
-        StartCoroutine(InstanceEnemies());
     }
+
+    void OnEnable() {
+        GameManager.instance.onChangeState += OnChangeGameState;        
+    }
+
+    void OnDisable() {
+        GameManager.instance.onChangeState -= OnChangeGameState;        
+    }
+
+    void OnChangeGameState(GameState state){
+        switch (state){
+            case GameState.NotStarted:
+                StopAllCoroutines();
+            break;
+            case GameState.InGame:
+                StartCoroutine(InstanceEnemies());
+            break;
+            case GameState.GameOver:
+                StopAllCoroutines();
+            break;
+            default:
+                break;
+        }
+    }
+
     void CalculateProbability(){
         _enemies.Sort((x, y) => x.probability.CompareTo(y.probability));
         float total=0;
@@ -49,9 +73,7 @@ public class EnemiesInstancer : MonoBehaviour
                     }                   
                 }
                 Enemy x = GameObject.Instantiate(enemyPrefab, transform.GetChild(selectedHole).GetChild(0).position, Quaternion.identity).GetComponent<Enemy>();
-                x.instancer = this;
-                x.hole = selectedHole;
-                x.SetEnemyFeatures(enemyFeatures);
+                x.SetInitValues(this, selectedHole, enemyFeatures);
                 yield return new WaitForSeconds(_timeToSpawn);
             }
             else

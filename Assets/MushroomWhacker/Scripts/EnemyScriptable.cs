@@ -6,5 +6,5 @@ using UnityEngine;
 public class EnemyScriptable: ScriptableObject{
     public AnimationCurve verticalPositionCurve;
     public Material materialForMesh;
-    public float pointsByPunch;
+    public int pointsByPunch;
 }

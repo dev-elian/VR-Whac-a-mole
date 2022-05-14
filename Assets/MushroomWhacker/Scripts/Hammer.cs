@@ -13,7 +13,6 @@ public class Hammer : MonoBehaviour
     [SerializeField] Material _enabled;
     [SerializeField] Material _disabled;
 
-
     void Start()
     {
         _mesh.material = _enabled;
@@ -27,11 +26,8 @@ public class Hammer : MonoBehaviour
                 _canCollide=true;
                 break;
             case Tags.Enemy:
-                if (!other.GetComponentInParent<Enemy>().IsKicked)
-                {
-                    _mesh.material = _disabled;
-                    StartCoroutine(ChangeCollide());
-                }
+                _mesh.material = _disabled;
+                StartCoroutine(ChangeCollide());
                 break;
             case Tags.Machine:
                 _mesh.material = _disabled;
