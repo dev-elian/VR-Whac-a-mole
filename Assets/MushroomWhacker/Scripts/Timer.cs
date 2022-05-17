@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_Timer : MonoBehaviour
+public class Timer : MonoBehaviour
 {
-    public static UI_Timer instance;
+    public static Timer instance;
 
     [Range(25,999)]
     [SerializeField] int _gameTime=100;
@@ -16,9 +17,10 @@ public class UI_Timer : MonoBehaviour
     [SerializeField] AnimationCurve _animationCurve;
 
     int _time;
-    [SerializeField] int _aditionalTime = 5;
     int _lastTime=0;
     bool _paused = false;
+
+    public Action<int> onAddTime;
 
     void Awake() {
         if (instance != null && instance != this) 
@@ -61,10 +63,10 @@ public class UI_Timer : MonoBehaviour
 
     void StartGame(){
         _time = _gameTime;
-        StartCoroutine(Timer());
+        StartCoroutine(SetTimer());
     }
 
-    IEnumerator Timer(){
+    IEnumerator SetTimer(){
         while (_time>0){
             RotateTimer();
             yield return new WaitForSeconds(1);
@@ -87,8 +89,10 @@ public class UI_Timer : MonoBehaviour
         _centena.RotateAtNumber(int.Parse(formatedScore[0].ToString()), _animationCurve);
     }
 
-    public void AddTime(){
-        _time+=_aditionalTime;
+    public void AddTime(int addTime){
+        _time+=addTime;
         RotateTimer();
+        if (onAddTime != null)
+            onAddTime(addTime);
     }
 }

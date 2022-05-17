@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_TextPoints : MonoBehaviour
+public class UI_TimePoints : MonoBehaviour
 {
     [SerializeField] TMPro.TextMeshProUGUI _tmpro;
 
     void Start() {
-        ScoreManager.instance.onPunchScore += ShowNumber;
+        Timer.instance.onAddTime += ShowNumber;
         _tmpro.text = "";
     }
 
     void OnDisable() {
-        ScoreManager.instance.onPunchScore -= ShowNumber;
+        Timer.instance.onAddTime -= ShowNumber;
     }
 
-    void ShowNumber(int score){
-        if (score != 0){
+    void ShowNumber(int time){
+        if (time != 0){
             StopAllCoroutines();
-            _tmpro.text = (score>0?"+":"")+score;
+            _tmpro.text = (time>0?"+":"")+time;
             StartCoroutine(ShowNumber());
         }
     }

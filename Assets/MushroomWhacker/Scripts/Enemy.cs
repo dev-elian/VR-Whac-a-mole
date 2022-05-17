@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
             if (onPunch != null){
                 onPunch.Invoke();
             }
-            ScoreManager.instance.IncreaseScore(_enemyData.pointsByPunch, _enemyData.type);
+            ScoreManager.instance.IncreaseScore(_enemyData.value, _enemyData.type);
             yield return new WaitForSeconds(0.5f);
             ClearHole();
         }

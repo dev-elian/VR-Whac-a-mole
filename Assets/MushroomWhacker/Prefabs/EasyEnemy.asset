@@ -64,4 +64,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   materialForMesh: {fileID: 2100000, guid: 38e7681924061aa479b000a07b8db69d, type: 2}
-  pointsByPunch: 10
+  value: 10
+  type: 0

@@ -94,7 +94,7 @@ public class ScoreManager : MonoBehaviour
                     ChangeScore(value);
                     break;
                 case EnemyType.TimeIncreaser:
-                    UI_Timer.instance.AddTime();
+                    Timer.instance.AddTime(value);
                     break;
                 case EnemyType.ScoreMultiplier:
                     StopAllCoroutines();
@@ -128,13 +128,13 @@ public class ScoreManager : MonoBehaviour
     }
 
     IEnumerator SetSpecialEnemyMultiplier(){
-        _specialMultiplier++;
+        _specialMultiplier=2;
         if (onActiveSpecialEnemy != null)
             onActiveSpecialEnemy(true);
         yield return new WaitForSeconds(_timeSpecialMultiplier);
         if (onActiveSpecialEnemy != null)
             onActiveSpecialEnemy(false);
-        _specialMultiplier = 1;
+        _specialMultiplier=1;
         ChangeStreak();
     }
 
