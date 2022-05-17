@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UI_Timer : MonoBehaviour
 {
+    public static UI_Timer instance;
+
     [Range(25,999)]
     [SerializeField] int _gameTime=100;
     
@@ -12,11 +14,18 @@ public class UI_Timer : MonoBehaviour
     [SerializeField] UI_Number _centena;
 
     [SerializeField] AnimationCurve _animationCurve;
-    [SerializeField] AnimationCurve _resetCurve;
 
     int _time;
+    [SerializeField] int _aditionalTime = 5;
     int _lastTime=0;
     bool _paused = false;
+
+    void Awake() {
+        if (instance != null && instance != this) 
+            Destroy(this); 
+        else 
+            instance = this; 
+    }
 
     void Start(){
         GameManager.instance.onChangeState += OnChangeGameState;        
@@ -76,5 +85,10 @@ public class UI_Timer : MonoBehaviour
         _unidad.RotateAtNumber(int.Parse(formatedScore[2].ToString()), _animationCurve);
         _decena.RotateAtNumber(int.Parse(formatedScore[1].ToString()), _animationCurve);
         _centena.RotateAtNumber(int.Parse(formatedScore[0].ToString()), _animationCurve);
+    }
+
+    public void AddTime(){
+        _time+=_aditionalTime;
+        RotateTimer();
     }
 }

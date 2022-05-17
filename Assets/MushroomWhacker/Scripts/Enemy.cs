@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
             if (onPunch != null){
                 onPunch.Invoke();
             }
-            ScoreManager.instance.IncreaseScore(_enemyData.pointsByPunch);
+            ScoreManager.instance.IncreaseScore(_enemyData.pointsByPunch, _enemyData.type);
             yield return new WaitForSeconds(0.5f);
             ClearHole();
         }
@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator Destroy(){
         yield return new WaitForSeconds(0.1f);
+        ScoreManager.instance.FailEnemy();
         _isKicked = true;
         ClearHole();
     }

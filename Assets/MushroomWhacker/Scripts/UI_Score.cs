@@ -14,7 +14,6 @@ public class UI_Score : MonoBehaviour
     [SerializeField] UI_Number _uDeMil;
 
     [SerializeField] AnimationCurve _animationCurve;
-    [SerializeField] AnimationCurve _resetCurve;
 
     int _lastScore=0;
     void Start(){
@@ -49,9 +48,9 @@ public class UI_Score : MonoBehaviour
     }
 
     void Reset3DScore(){
-        _unidad.RotateAtNumber(0, _resetCurve);
-        _decena.RotateAtNumber(0, _resetCurve);
-        _centena.RotateAtNumber(0, _resetCurve);
-        _uDeMil.RotateAtNumber(0, _resetCurve);
+        _unidad.RotateAtNumber(0, _animationCurve);
+        _decena.RotateAtNumber(0, _animationCurve);
+        _centena.RotateAtNumber(0, _animationCurve);
+        _uDeMil.RotateAtNumber(0, _animationCurve);
     }
 }

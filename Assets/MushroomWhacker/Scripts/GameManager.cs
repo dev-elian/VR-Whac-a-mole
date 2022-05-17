@@ -12,7 +12,8 @@ public enum GameState{
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
-    public GameState gameState;
+    GameState _gameState;
+    public GameState gameState {get => instance._gameState;}
     public Action<GameState> onChangeState;
     
     void Awake() {
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
             Destroy(this); 
         else 
             instance = this; 
-        gameState = GameState.NotStarted;
+        _gameState = GameState.NotStarted;
     }
 
     //CLEAR DEBUG
@@ -59,8 +60,8 @@ public class GameManager : MonoBehaviour
     }
 
     void ChangeState(GameState newState){
-        gameState = newState;
+        _gameState = newState;
         if(onChangeState != null)
-            onChangeState(gameState);
+            onChangeState(_gameState);
     }
 }
