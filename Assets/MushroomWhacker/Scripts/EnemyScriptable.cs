@@ -5,7 +5,8 @@ using UnityEngine;
 public enum EnemyType{
     Normal = 0,
     TimeIncreaser = 1,
-    ScoreMultiplier = 2
+    ScoreMultiplier = 2,
+    ScoreDecreaser = 3
 }
 
 [CreateAssetMenu(fileName = "NewType", menuName = "Enemy")]

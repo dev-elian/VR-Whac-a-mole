@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
-  m_Name: Comodin
+  m_Name: DecreaserScoreEnemy
   m_EditorClassIdentifier: 
   verticalPositionCurve:
     serializedVersion: 2
@@ -20,49 +20,40 @@ MonoBehaviour:
       value: 0
       inSlope: 0
       outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.123188406
-      value: 1.004717
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.6956522
-      value: 1.004717
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.7342995
-      value: 0.7051887
-      inSlope: -5.8584814
-      outSlope: -5.8584814
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.08080823
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.9975845
-      value: 0.004716981
+      time: 0.15
+      value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 136
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  materialForMesh: {fileID: 2100000, guid: a86eeac50cf5f534ab03aa63cdae4bbe, type: 2}
-  value: 5
-  type: 1
+  materialForMesh: {fileID: 2100000, guid: 1384afa916b31244b86bfbc5b9c0520a, type: 2}
+  value: 0
+  type: 3

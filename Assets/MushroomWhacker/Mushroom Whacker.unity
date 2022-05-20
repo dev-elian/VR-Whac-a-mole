@@ -2326,7 +2326,11 @@ MonoBehaviour:
   - enemy: {fileID: 11400000, guid: 2734d11d16917f4478aaa75fdccedb7b, type: 2}
     probability: 1
   - enemy: {fileID: 11400000, guid: a175b937876c3c74eb5d7b44e03dc94a, type: 2}
-    probability: 0
+    probability: 1
+  - enemy: {fileID: 11400000, guid: 7b92a44592802a9468997c8fa51e0273, type: 2}
+    probability: 1
+  - enemy: {fileID: 11400000, guid: 5a72c8c79049e60429aa52b4aa73f766, type: 2}
+    probability: 1
   _timeToSpawn: 0.2
   _holesWithEnemies: 
 --- !u!4 &1382791277
