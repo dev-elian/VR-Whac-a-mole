@@ -66,3 +66,4 @@ MonoBehaviour:
   materialForMesh: {fileID: 2100000, guid: 38e7681924061aa479b000a07b8db69d, type: 2}
   value: 10
   type: 0
+  breakStreak: 1

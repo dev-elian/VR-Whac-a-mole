@@ -16,4 +16,5 @@ public class EnemyScriptable: ScriptableObject{
     [Header("Points Per Punch | Time To Add")]
     public int value;
     public EnemyType type;
+    public bool breakStreak;
 }

@@ -38,8 +38,8 @@ public class UI_Streak : MonoBehaviour{
     IEnumerator SetParameters(int combo, int streakRest){
         yield return new WaitForEndOfFrame();
         CancelLastAnimation();
-        if (ScoreManager.instance.combo != ScoreManager.instance.maxComboPossible){
-            if (combo == 0 && streakRest == 0){
+        if (ScoreManager.instance.combo != ScoreManager.instance.maxComboPossible && !_specialEnemyActive){
+            if (combo == 1 && streakRest == 0){
                 _accumulatedTime = _progress.fillAmount*_curve.keys[1].time;
                 _showRestartAnimation = true;
             }else{
@@ -64,14 +64,16 @@ public class UI_Streak : MonoBehaviour{
     }
 
     void Update(){
-        if (_showAnimation)
-            SetProgress();            
-
-        if (_showRestartAnimation)
-            ReturnToZero();
-
         if (_specialEnemyActive)
             _progress.color = _colorGradient.Evaluate(1);
+        else
+        {
+            if (_showAnimation)
+                SetProgress();            
+
+            if (_showRestartAnimation)
+                ReturnToZero();
+        }
     }
 
     void SetProgress(){

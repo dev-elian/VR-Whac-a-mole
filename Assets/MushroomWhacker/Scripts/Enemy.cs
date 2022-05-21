@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 
     EnemyScriptable _enemyData;
     public Action<EnemyScriptable> onInstanciateEnemy;
-    public Action onPunch;
+    public Action onPunch;    
 
     public void SetInitValues(EnemiesInstancer instancer, int hole, EnemyScriptable data){
         this.instancer = instancer;
@@ -41,10 +41,13 @@ public class Enemy : MonoBehaviour
     }
 
     public IEnumerator Destroy(){
-        yield return new WaitForSeconds(0.1f);
-        ScoreManager.instance.FailEnemy();
-        _isKicked = true;
-        ClearHole();
+        if (!_isKicked){
+            _isKicked = true;
+            yield return new WaitForSeconds(0.1f);
+            if (_enemyData.breakStreak)
+                ScoreManager.instance.FailEnemy();
+            ClearHole();
+        }
     }
 
     public void ClearHole(){

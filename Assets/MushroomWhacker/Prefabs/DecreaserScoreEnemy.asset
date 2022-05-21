@@ -55,5 +55,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   materialForMesh: {fileID: 2100000, guid: 1384afa916b31244b86bfbc5b9c0520a, type: 2}
-  value: 0
+  value: 100
   type: 3
+  breakStreak: 0
