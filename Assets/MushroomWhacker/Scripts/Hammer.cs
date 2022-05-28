@@ -20,7 +20,7 @@ public class Hammer : MonoBehaviour
     void Start()
     {
         _mesh.material = _enabled;
-        _canCollide=true;
+        _canCollide=true; 
     }
     public void HammerCrash(Collider other) {
         if (GameManager.instance.gameState == GameState.InGame){

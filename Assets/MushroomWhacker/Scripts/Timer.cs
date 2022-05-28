@@ -17,7 +17,6 @@ public class Timer : MonoBehaviour
     [SerializeField] AnimationCurve _animationCurve;
 
     int _time;
-    int _lastTime=0;
     bool _paused = false;
 
     public Action<int> onAddTime;

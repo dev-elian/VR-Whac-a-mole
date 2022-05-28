@@ -15,7 +15,6 @@ public class UI_Score : MonoBehaviour
 
     [SerializeField] AnimationCurve _animationCurve;
 
-    int _lastScore=0;
     void Start(){
         GameManager.instance.onChangeState += OnChangeGameState;        
         ScoreManager.instance.onChangeScore += Rotate3DScore;

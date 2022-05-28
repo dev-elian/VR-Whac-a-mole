@@ -5,6 +5,7 @@ using UnityEngine;
 public class HammerDetectable : MonoBehaviour
 {
     void OnTriggerEnter(Collider other) {
+        Debug.Log("XD"+other.gameObject.name);
         GetComponentInParent<Hammer>().HammerCrash(other);
     }
 }
