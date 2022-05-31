@@ -22,7 +22,7 @@ public class UI_Number : MonoBehaviour{
     void Update(){
         if (_rotating){
             _accumulatedTime+=Time.deltaTime;
-            transform.rotation = Quaternion.Euler(_baseAngle+ _curve.Evaluate(_accumulatedTime)*_angleToReach,0,0);
+            transform.localRotation = Quaternion.Euler(_baseAngle+ _curve.Evaluate(_accumulatedTime)*_angleToReach,0,0);
             if (_accumulatedTime>=_timeToRotate){
                 SetFinalRotation();
             }
@@ -50,7 +50,7 @@ public class UI_Number : MonoBehaviour{
     void SetFinalRotation(){
         _rotating = false;
         _lastAngle+=_angleToReach%360;
-        transform.rotation = Quaternion.Euler(_baseAngle+_angleToReach,0,0);
+        transform.localRotation = Quaternion.Euler(_baseAngle+_angleToReach,0,0);
     }
 
     // float SetAngleRotation(int number, ScoreChange score){

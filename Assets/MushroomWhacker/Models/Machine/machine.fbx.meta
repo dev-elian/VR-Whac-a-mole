@@ -8,37 +8,32 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: a41f6d57ee4f4c545ae1b27fb810156d, type: 2}
+    second: {fileID: 2100000, guid: 67708fba83451644e9425244af2e7f84, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.004
-    second: {fileID: 2100000, guid: 05e4bba08e367e04ebd4acfb205fcecd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: counter
-    second: {fileID: 2100000, guid: c6c1702b068926f45a2018aac00b1b80, type: 2}
+    second: {fileID: 2100000, guid: 18b58d511729e2843bc78108d7da6706, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: main
-    second: {fileID: 2100000, guid: b50b63543f03b02439f37a0e4620f2ac, type: 2}
+    second: {fileID: 2100000, guid: 2ce76c86ee1fe22409dba82d204898c7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: panel
-    second: {fileID: 2100000, guid: 43e4396b3040a7f48bc40fb5cdf47a6e, type: 2}
+    second: {fileID: 2100000, guid: 4d1f716194409b74ba27d60f66ca1e09, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: red
-    second: {fileID: 2100000, guid: 51734c5e7c7cddb49bd6da3b830aeb62, type: 2}
+    second: {fileID: 2100000, guid: e231f5af134e7634c81be7683ca36605, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: title
-    second: {fileID: 2100000, guid: 4539ebaa81f684e45b5a964a3ebb9aba, type: 2}
+    second: {fileID: 2100000, guid: e4d56943bd7c1a64d8f7f276ccf44fc1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -69,7 +64,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -120,7 +115,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
