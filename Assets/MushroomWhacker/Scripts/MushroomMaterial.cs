@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class MushroomMaterial : MonoBehaviour
 {
-    Enemy _enemy;
-    [SerializeField] SkinnedMeshRenderer _renderer;
+    [SerializeField] Enemy _enemy;
 
     void Awake() {
-        _enemy = GetComponentInParent<Enemy>();
-    }
-
-    void OnEnable() {
-        _enemy.onInstanciateEnemy += SetMaterial;
+        _enemy.onInstanciateEnemy += SetObjects;
     }
 
     void OnDisable() {
-        _enemy.onInstanciateEnemy -= SetMaterial;
+        Debug.Log(_enemy);
+        _enemy.onInstanciateEnemy -= SetObjects;
     }
 
-    void SetMaterial(EnemyScriptable data){
-        _renderer.material = data.materialForMesh;
+    void SetObjects(EnemyScriptable data){
+        Instantiate(data.mesh, transform.position, Quaternion.identity, transform);
+        Instantiate(data.detectable, transform.position, Quaternion.identity, transform);
     }
 }

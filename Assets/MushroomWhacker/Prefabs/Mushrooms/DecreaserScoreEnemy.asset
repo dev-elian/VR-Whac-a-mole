@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
-  m_Name: MultiplierEnemy
+  m_Name: DecreaserScoreEnemy
   m_EditorClassIdentifier: 
   verticalPositionCurve:
     serializedVersion: 2
@@ -43,17 +43,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.7246483
-      value: 0.6915579
-      inSlope: -4.423438
-      outSlope: -4.423438
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
       time: 1
-      value: 0.0023584906
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -63,6 +54,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  materialForMesh: {fileID: 2100000, guid: 6c95a4240fe755345b2fa48a83e87a3e, type: 2}
-  value: 0
-  type: 2
+  mesh: {fileID: 685033510133688196, guid: 427e295b64126d547ac2c617f78cc35b, type: 3}
+  detectable: {fileID: 6432730794523095976, guid: 85fa76e61e580f941b940a8108d10982, type: 3}
+  value: 100
+  type: 3
+  breakStreak: 0

@@ -8,6 +8,7 @@ TagManager:
   - Machine
   - Weapon
   - Reloader
+  - Hand
   layers:
   - Default
   - TransparentFX

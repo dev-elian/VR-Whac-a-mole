@@ -63,7 +63,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  materialForMesh: {fileID: 2100000, guid: 454cace436225a047a0236e67b95f9e7, type: 2}
+  mesh: {fileID: 6043299371576883606, guid: 664edb371170e494d99513b500cf3e7b, type: 3}
+  detectable: {fileID: 6432730794523095976, guid: 85fa76e61e580f941b940a8108d10982, type: 3}
   value: 25
   type: 0
   breakStreak: 1

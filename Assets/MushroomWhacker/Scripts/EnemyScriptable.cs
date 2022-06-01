@@ -12,7 +12,8 @@ public enum EnemyType{
 [CreateAssetMenu(fileName = "NewType", menuName = "Enemy")]
 public class EnemyScriptable: ScriptableObject{
     public AnimationCurve verticalPositionCurve;
-    public Material materialForMesh;
+    public GameObject mesh;
+    public GameObject detectable;
     [Header("Points Per Punch | Time To Add")]
     public int value;
     public EnemyType type;

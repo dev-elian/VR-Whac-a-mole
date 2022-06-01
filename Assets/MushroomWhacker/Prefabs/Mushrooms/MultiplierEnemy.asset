@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
-  m_Name: EasyEnemy
+  m_Name: MultiplierEnemy
   m_EditorClassIdentifier: 
   verticalPositionCurve:
     serializedVersion: 2
@@ -18,8 +18,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -34,8 +34,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.75
-      value: 1.0023584
+      time: 0.7
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -43,16 +43,16 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.81647897
-      value: 0.443019
-      inSlope: -6.5559254
-      outSlope: -6.5559254
+      time: 0.7246483
+      value: 0.6915579
+      inSlope: -4.423438
+      outSlope: -4.423438
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0.09859161
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.9951691
+      time: 1
       value: 0.0023584906
       inSlope: 0
       outSlope: 0
@@ -63,7 +63,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  materialForMesh: {fileID: 2100000, guid: 38e7681924061aa479b000a07b8db69d, type: 2}
-  value: 10
-  type: 0
-  breakStreak: 1
+  mesh: {fileID: 4705946361375858654, guid: 1fb4438e64681bc4e96940c8680644fe, type: 3}
+  detectable: {fileID: 6432730794523095976, guid: 85fa76e61e580f941b940a8108d10982, type: 3}
+  value: 0
+  type: 2
+  breakStreak: 0

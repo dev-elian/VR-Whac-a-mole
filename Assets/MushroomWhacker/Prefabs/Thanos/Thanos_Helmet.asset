@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
+  m_Name: Thanos_Helmet
+  m_EditorClassIdentifier: 
+  verticalPositionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.15
+      value: 1
+      inSlope: 0.35492224
+      outSlope: 0.35492224
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.34250838
+    - serializedVersion: 3
+      time: 0.5
+      value: 1.0023584
+      inSlope: -0.30186555
+      outSlope: -0.30186555
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.31325954
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.57611406
+      value: 0.7578894
+      inSlope: -2.554753
+      outSlope: -2.554753
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9975845
+      value: -0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mesh: {fileID: 2505884286962374652, guid: 63d9b1db64bffdb4f950e753adbf90cb, type: 3}
+  detectable: {fileID: 2847449027251473806, guid: d5f69cf162bf0f34297ccd6417ae4498, type: 3}
+  value: 100
+  type: 0
+  breakStreak: 0

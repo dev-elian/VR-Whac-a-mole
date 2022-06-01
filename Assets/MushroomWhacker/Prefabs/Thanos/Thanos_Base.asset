@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
-  m_Name: HardEnemy
+  m_Name: Thanos_Base
   m_EditorClassIdentifier: 
   verticalPositionCurve:
     serializedVersion: 2
@@ -25,35 +25,35 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.15
+      time: 0.1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.32169354
+      outSlope: 0.32169354
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
+      outWeight: 0.20772986
+    - serializedVersion: 3
+      time: 0.7
+      value: 1
+      inSlope: -0.24513133
+      outSlope: -0.24513133
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.19243123
       outWeight: 0
     - serializedVersion: 3
-      time: 0.5
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.7380222
+      value: 0.8069316
+      inSlope: -3.88246
+      outSlope: -3.88246
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.53761667
-      value: 0.6061257
-      inSlope: -10.154686
-      outSlope: -10.154686
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.25641078
-    - serializedVersion: 3
-      time: 0.66490215
-      value: -0.007080498
+      time: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -63,7 +63,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  materialForMesh: {fileID: 2100000, guid: 233702e70a3d69942a1b79db9766052e, type: 2}
+  mesh: {fileID: 8724606817653680664, guid: 036082154207d4d4c8b7036351ad6989, type: 3}
+  detectable: {fileID: 2847449027251473806, guid: d5f69cf162bf0f34297ccd6417ae4498, type: 3}
   value: 50
   type: 0
-  breakStreak: 1
+  breakStreak: 0
