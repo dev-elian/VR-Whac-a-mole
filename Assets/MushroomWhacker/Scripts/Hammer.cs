@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Hammer : MonoBehaviour
 {
-
-    [Header("DEBUG")]
-    public bool NOT_RELOADING=false;
-
     public bool _canCollide;
     public bool CanCollide {
         get {return _canCollide;}
@@ -45,9 +41,6 @@ public class Hammer : MonoBehaviour
 
     IEnumerator ChangeCollide(){
         yield return new WaitForSeconds(0.1f);
-        //CLEAR DEBUG
-        if (NOT_RELOADING)
-        //
-            _canCollide=false;
+        // _canCollide=false;
     }
 }

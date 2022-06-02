@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
   m_Name: TimeEnemy
   m_EditorClassIdentifier: 
+  type: 1
   verticalPositionCurve:
     serializedVersion: 2
     m_Curve:
@@ -63,8 +64,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  breakStreak: 0
+  particles: {fileID: 1265099683800482923, guid: 576f34295d2f8194bace2f366411dbe8, type: 3}
   mesh: {fileID: 3150006809957835056, guid: 55e8a61d9157dba4bac7777517bfc670, type: 3}
   detectable: {fileID: 6432730794523095976, guid: 85fa76e61e580f941b940a8108d10982, type: 3}
   value: 5
-  type: 1
-  breakStreak: 0

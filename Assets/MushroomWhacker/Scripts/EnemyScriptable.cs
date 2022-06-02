@@ -11,11 +11,14 @@ public enum EnemyType{
 
 [CreateAssetMenu(fileName = "NewType", menuName = "Enemy")]
 public class EnemyScriptable: ScriptableObject{
+    public EnemyType type;
     public AnimationCurve verticalPositionCurve;
+    public bool breakStreak;
+    public GameObject particles;
+
     public GameObject mesh;
     public GameObject detectable;
+
     [Header("Points Per Punch | Time To Add")]
     public int value;
-    public EnemyType type;
-    public bool breakStreak;
 }

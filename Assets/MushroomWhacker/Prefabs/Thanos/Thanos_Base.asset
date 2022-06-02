@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
   m_Name: Thanos_Base
   m_EditorClassIdentifier: 
+  type: 0
   verticalPositionCurve:
     serializedVersion: 2
     m_Curve:
@@ -63,8 +64,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  breakStreak: 0
+  particles: {fileID: 7082556255974943909, guid: 79173156afe32d0479c1592d4090ca3c, type: 3}
   mesh: {fileID: 8724606817653680664, guid: 036082154207d4d4c8b7036351ad6989, type: 3}
   detectable: {fileID: 2847449027251473806, guid: d5f69cf162bf0f34297ccd6417ae4498, type: 3}
   value: 50
-  type: 0
-  breakStreak: 0

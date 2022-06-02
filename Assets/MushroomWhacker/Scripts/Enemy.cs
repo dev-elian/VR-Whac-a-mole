@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
     public IEnumerator PunchEnemy(){
         if (!_isKicked){
             _isKicked = true;
+            Instantiate(_enemyData.particles, transform.position+new Vector3(0, 0.15f,0), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
             if (onPunch != null){
                 onPunch.Invoke();

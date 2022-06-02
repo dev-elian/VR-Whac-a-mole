@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     //CLEAR DEBUG
     void Start() {
-        // StartGame();
+        StartGame();
         // Time.timeScale = 3;
     }
     //
