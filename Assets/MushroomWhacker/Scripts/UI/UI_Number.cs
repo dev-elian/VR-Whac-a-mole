@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UI_Number : MonoBehaviour{
@@ -17,7 +15,6 @@ public class UI_Number : MonoBehaviour{
     public int _lastNumber = 0;
  
     public bool _rotating = false;
-    
 
     void Update(){
         if (_rotating){
@@ -52,20 +49,6 @@ public class UI_Number : MonoBehaviour{
         _lastAngle+=_angleToReach%360;
         transform.localRotation = Quaternion.Euler(_baseAngle+_angleToReach,0,0);
     }
-
-    // float SetAngleRotation(int number, ScoreChange score){
-    //     if (score == ScoreChange.Increase){
-    //         if (number >= _lastNumber)
-    //             return (number-_lastNumber)*36;
-    //         else
-    //             return (number+10)*36-_lastAngle;
-    //     }else{
-    //         if (number+5 <= _lastNumber)
-    //             return (_lastNumber - number)*36;
-    //         else
-    //             return (number-_lastNumber)*36;
-    //     }
-    // }
 
     int FindShortestWay(int number){
         int stepsToRight = 0;

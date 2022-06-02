@@ -14,6 +14,7 @@ public class EnemiesInstancer : MonoBehaviour
     [SerializeField] List<EnemiesProbability> _enemies; 
     [SerializeField] float _timeToSpawn = 1;
     public List<int> _holesWithEnemies;
+    [SerializeField] AudioSource _sound;
 
     void Start(){
         _holesWithEnemies = new List<int>();
@@ -74,6 +75,7 @@ public class EnemiesInstancer : MonoBehaviour
                     }                   
                 }
                 Enemy x = GameObject.Instantiate(enemyPrefab, transform.GetChild(selectedHole).GetChild(0).position, Quaternion.identity).GetComponent<Enemy>();
+                _sound.Play();
                 x.SetInitValues(this, selectedHole, enemyFeatures);
                 yield return new WaitForSeconds(_timeToSpawn);
             }

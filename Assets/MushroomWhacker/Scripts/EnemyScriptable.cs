@@ -13,7 +13,7 @@ public enum EnemyType{
 public class EnemyScriptable: ScriptableObject{
     public EnemyType type;
     public AnimationCurve verticalPositionCurve;
-    public bool breakStreak;
+    public bool canBreakStreak;
     public GameObject particles;
 
     public GameObject mesh;

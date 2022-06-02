@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
-  m_Name: Thanos_Helmet
+  m_Name: Thanos_IronMan
   m_EditorClassIdentifier: 
-  type: 0
+  type: 3
   verticalPositionCurve:
     serializedVersion: 2
     m_Curve:
@@ -28,33 +28,33 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.15
       value: 1
-      inSlope: 0.35492224
-      outSlope: 0.35492224
+      inSlope: 0.33302304
+      outSlope: 0.33302304
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.34250838
+      outWeight: 0.24616382
     - serializedVersion: 3
-      time: 0.5
-      value: 1.0023584
-      inSlope: -0.30186555
-      outSlope: -0.30186555
+      time: 0.6690762
+      value: 1.0023651
+      inSlope: -0.4110735
+      outSlope: -0.4110735
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.31325954
+      inWeight: 0.23265754
       outWeight: 0
     - serializedVersion: 3
-      time: 0.57611406
-      value: 0.7578894
-      inSlope: -2.554753
-      outSlope: -2.554753
+      time: 0.73537797
+      value: 0.7106352
+      inSlope: -7.488603
+      outSlope: -7.488603
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.051407166
     - serializedVersion: 3
-      time: 0.9975845
-      value: -0
+      time: 1
+      value: -0.0023584906
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -66,6 +66,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   breakStreak: 0
   particles: {fileID: 7082556255974943909, guid: 79173156afe32d0479c1592d4090ca3c, type: 3}
-  mesh: {fileID: 2505884286962374652, guid: 63d9b1db64bffdb4f950e753adbf90cb, type: 3}
+  mesh: {fileID: 1717717940324373830, guid: 68161fcda0f096149b807f1b02cdebe6, type: 3}
   detectable: {fileID: 2847449027251473806, guid: d5f69cf162bf0f34297ccd6417ae4498, type: 3}
-  value: 100
+  value: 200

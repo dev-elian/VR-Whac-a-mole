@@ -28,20 +28,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.15
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.1881344
+      outSlope: 0.1881344
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.22793148
     - serializedVersion: 3
       time: 0.7
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.18492754
+      outSlope: -0.18492754
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.23188409
       outWeight: 0
     - serializedVersion: 3
       time: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakStreak: 0
+  canBreakStreak: 0
   particles: {fileID: 1265099683800482923, guid: 576f34295d2f8194bace2f366411dbe8, type: 3}
   mesh: {fileID: 685033510133688196, guid: 427e295b64126d547ac2c617f78cc35b, type: 3}
   detectable: {fileID: 6432730794523095976, guid: 85fa76e61e580f941b940a8108d10982, type: 3}

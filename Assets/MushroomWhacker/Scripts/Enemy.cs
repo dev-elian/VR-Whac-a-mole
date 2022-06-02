@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         if (!_isKicked){
             _isKicked = true;
             yield return new WaitForSeconds(0.1f);
-            if (_enemyData.breakStreak)
+            if (_enemyData.canBreakStreak)
                 ScoreManager.instance.FailEnemy();
             ClearHole();
         }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921684b63e01bef4bbe9f417b9bb07f0, type: 3}
-  m_Name: HardEnemy
+  m_Name: Thanos_Helmet_Silver
   m_EditorClassIdentifier: 
   type: 0
   verticalPositionCurve:
@@ -28,33 +28,33 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.15
       value: 1
-      inSlope: 0.37281108
-      outSlope: 0.37281108
+      inSlope: 0.42642954
+      outSlope: 0.42642954
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.21843486
+      outWeight: 0.23407273
     - serializedVersion: 3
-      time: 0.49679565
+      time: 0.6023804
       value: 1
-      inSlope: -0.34372276
-      outSlope: -0.34372276
+      inSlope: -0.31328064
+      outSlope: -0.31328064
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.21918422
+      inWeight: 0.25021315
       outWeight: 0
     - serializedVersion: 3
-      time: 0.5183601
-      value: 0.6536416
-      inSlope: -10.154686
-      outSlope: -10.154686
+      time: 0.63007545
+      value: 0.701198
+      inSlope: -5.788436
+      outSlope: -5.788436
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0.25641078
+      inWeight: 0.33333334
+      outWeight: 0.055003922
     - serializedVersion: 3
-      time: 0.66490215
-      value: -0.007080498
+      time: 0.9879227
+      value: -0.0023584906
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   canBreakStreak: 1
-  particles: {fileID: 1265099683800482923, guid: 576f34295d2f8194bace2f366411dbe8, type: 3}
-  mesh: {fileID: 5969772080785743501, guid: eb83573dc47ccf5459daa7bb103a33d1, type: 3}
-  detectable: {fileID: 6432730794523095976, guid: 85fa76e61e580f941b940a8108d10982, type: 3}
-  value: 50
+  particles: {fileID: 7082556255974943909, guid: 79173156afe32d0479c1592d4090ca3c, type: 3}
+  mesh: {fileID: 4330115900645597245, guid: 057fecc3d513e6d4f8fce59f84f97f8c, type: 3}
+  detectable: {fileID: 2847449027251473806, guid: d5f69cf162bf0f34297ccd6417ae4498, type: 3}
+  value: 100

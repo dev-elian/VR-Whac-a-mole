@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public enum ScoreChange{
@@ -14,6 +13,8 @@ public class UI_Score : MonoBehaviour
     [SerializeField] UI_Number _uDeMil;
 
     [SerializeField] AnimationCurve _animationCurve;
+    public Action onBadPunch;
+    int _lastScore=0;
 
     void Start(){
         GameManager.instance.onChangeState += OnChangeGameState;        
@@ -39,6 +40,10 @@ public class UI_Score : MonoBehaviour
     }
 
     void Rotate3DScore(int score){
+        if (_lastScore>score && onBadPunch !=null)
+            onBadPunch();
+        _lastScore=score;
+
         string formatedScore = score.ToString().PadLeft(4, '0');
         _unidad.RotateAtNumber(int.Parse(formatedScore[3].ToString()), _animationCurve);
         _decena.RotateAtNumber(int.Parse(formatedScore[2].ToString()), _animationCurve);

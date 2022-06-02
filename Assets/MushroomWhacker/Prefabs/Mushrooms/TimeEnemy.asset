@@ -28,24 +28,24 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.123188406
       value: 1.004717
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
+      inSlope: 0.26702544
+      outSlope: 0.26702544
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.20152263
     - serializedVersion: 3
-      time: 0.6956522
+      time: 0.6980631
       value: 1.004717
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
+      inSlope: -0.16155237
+      outSlope: -0.16155237
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.20412034
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.7342995
-      value: 0.7051887
+      time: 0.7126166
+      value: 0.7194024
       inSlope: -5.8584814
       outSlope: -5.8584814
       tangentMode: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakStreak: 0
+  canBreakStreak: 0
   particles: {fileID: 1265099683800482923, guid: 576f34295d2f8194bace2f366411dbe8, type: 3}
   mesh: {fileID: 3150006809957835056, guid: 55e8a61d9157dba4bac7777517bfc670, type: 3}
   detectable: {fileID: 6432730794523095976, guid: 85fa76e61e580f941b940a8108d10982, type: 3}
