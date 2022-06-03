@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance { get; private set; }
+    public static ScoreManager instance { get; private set; }        
 
     [SerializeField] int _streakForComboMultiplier=5;
     [SerializeField] int _maxComboPossible=8;
@@ -153,13 +153,10 @@ public class ScoreManager : MonoBehaviour
     }
 
     public void SaveScore(){
-        if (PlayerPrefs.GetInt("maxScore",0)<_score){
-            PlayerPrefs.SetInt("maxScore", _score);
+        if (PlayerPrefs.GetInt("_maxScore",0)<_score){
+            PlayerPrefs.SetInt("_maxScore", _score);
             PlayerPrefs.Save();
         }
-        if (PlayerPrefs.GetInt("maxStreak",0)<_streak){
-            PlayerPrefs.SetInt("maxStreak", _streak);
-            PlayerPrefs.Save();
-        }
+        AchievmentsManager.instance.VerifyAchievments();
     }
 }

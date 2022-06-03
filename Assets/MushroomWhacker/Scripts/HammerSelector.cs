@@ -91,4 +91,8 @@ public class HammerSelector : MonoBehaviour
             _meshHammers[i].SetActive(false);
         }
     }
+
+    public void AddHammer(GameObject hammer){
+        _hammers.Add(hammer);
+    }
 }
