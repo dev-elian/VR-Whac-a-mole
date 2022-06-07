@@ -15,7 +15,6 @@ public class AchievmentsManager : MonoBehaviour
 
     public static AchievmentsManager instance;
     [SerializeField] List<Achievment> achievments;
-
     
     void Awake() {
         if (instance != null && instance != this) 
@@ -24,13 +23,13 @@ public class AchievmentsManager : MonoBehaviour
             instance = this; 
     }    
 
-    void Start() {
+    IEnumerator Start() {
+        yield return new WaitForSeconds(2);
         VerifyAchievments();
     }
 
     public void VerifyAchievments(){
-        int maxScore = PlayerPrefs.GetInt("maxScore");
-        Debug.Log(maxScore);
+        int maxScore = PlayerPrefs.GetInt("_maxScore");
         foreach (Achievment ach in achievments){
             if (maxScore>ach.scoreToReach && !ach.invoked){
                 ach.invoked = true;

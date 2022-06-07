@@ -13,11 +13,11 @@ public class Hammer : MonoBehaviour
     [SerializeField] Material _enabled;
     [SerializeField] Material _disabled;
 
-    void Start()
-    {
+    void Start(){
         _mesh.material = _enabled;
         _canCollide=true; 
     }
+    
     public void HammerCrash(Collider other) {
         if (GameManager.instance.gameState == GameState.InGame){
             switch (other.gameObject.tag){
@@ -27,11 +27,12 @@ public class Hammer : MonoBehaviour
                     break;
                 case Tags.Enemy:
                     _mesh.material = _disabled;
-                    StartCoroutine(ChangeCollide());
+                    _canCollide=false;
+                    StartCoroutine(other.GetComponentInParent<Enemy>().PunchEnemy());
                     break;
                 case Tags.Machine:
                     _mesh.material = _disabled;
-                    StartCoroutine(ChangeCollide());
+                    _canCollide=false;
                     break;
                 default:
                     break;
@@ -40,7 +41,7 @@ public class Hammer : MonoBehaviour
     }
 
     IEnumerator ChangeCollide(){
-        yield return new WaitForSeconds(0.1f);
-        // _canCollide=false;
+        yield return new WaitForSeconds(0.05f);
+        _canCollide=false;
     }
 }

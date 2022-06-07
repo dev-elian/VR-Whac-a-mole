@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7971975378374398532}
   - component: {fileID: 7971975378374398533}
+  - component: {fileID: -8530371809246625734}
   - component: {fileID: 7971975378374398585}
   - component: {fileID: 7971975378374398587}
   - component: {fileID: 7971975378374398586}
@@ -173,6 +174,18 @@ MonoBehaviour:
   _mesh: {fileID: 1124142648545125918}
   _enabled: {fileID: 2100000, guid: a0baf9c1f6b38f341b5f98a5f2f9a3de, type: 2}
   _disabled: {fileID: 2100000, guid: cb4cfdb8ca3f1e540bf57b30fe0aca9d, type: 2}
+--- !u!114 &-8530371809246625734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7971975378374398534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76020bece6fcf34aa87c1ffc5254f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &7971975378374398585
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -24,7 +24,6 @@ public class ElectricParticlesSound : MonoBehaviour
             }
             _restTime-=Time.deltaTime;
         }
-        Debug.Log("P"+_particles.isPlaying);
     }
 
     public void SetWorthy(bool emit){

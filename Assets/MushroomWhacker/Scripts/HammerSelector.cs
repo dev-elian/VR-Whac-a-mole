@@ -94,5 +94,11 @@ public class HammerSelector : MonoBehaviour
 
     public void AddHammer(GameObject hammer){
         _hammers.Add(hammer);
+        Transform tmpHammer = Instantiate(hammer, transform).transform;
+        tmpHammer.GetComponent<BoxCollider>().enabled = false;
+        tmpHammer.localPosition = Vector3.zero;
+        tmpHammer.localRotation = Quaternion.identity;
+        _meshHammers.Add(tmpHammer.gameObject);
+        tmpHammer.gameObject.SetActive(false);
     }
 }

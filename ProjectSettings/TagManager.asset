@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - Reloader
   - Hand
+  - RoomCollisions
   layers:
   - Default
   - TransparentFX
