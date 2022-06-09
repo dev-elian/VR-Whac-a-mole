@@ -19,9 +19,9 @@ TagManager:
   - UI
   - Lighting
   - Hammers
-  - 
-  - 
-  - 
+  - RoomCollisions
+  - Interactables
+  - Player
   - 
   - 
   - 

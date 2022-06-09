@@ -6,6 +6,10 @@ public class MachinesManager : MonoBehaviour
 {
     [SerializeField] GameObject _mushroomMachine;
     [SerializeField] GameObject _thanosMachine;
+
+    [SerializeField] GameObject _mushroomInstancer;
+    [SerializeField] GameObject _thanosInstancer;
+
     [SerializeField] GameObject _transitionMachine;
     [SerializeField] Renderer _transitionMachineRend;
     bool _startTransition=false;
@@ -16,20 +20,30 @@ public class MachinesManager : MonoBehaviour
         _mushroomMachine.SetActive(true);
         _thanosMachine.SetActive(false);
         _transitionMachineRend.sharedMaterial.color = new Color(1,1,1,0);
+
+        PlayerControllers.instance.onChangeMachine += ChangeMachine;
     }
 
     void OnDisable() {
         _transitionMachineRend.sharedMaterial.color = new Color(1,1,1,0);
+
+        PlayerControllers.instance.onChangeMachine -= ChangeMachine;
     }
 
     public void ChangeMachine(){
         if (_mushroomMachine.activeInHierarchy){
             _mushroomMachine.SetActive(false);
-            _thanosMachine.SetActive(true);    
+            _thanosMachine.SetActive(true);   
+            _thanosInstancer.SetActive(true);
+            _mushroomInstancer.SetActive(false);
             return;        
+        }else{
+            _thanosInstancer.SetActive(false);
+            _mushroomInstancer.SetActive(true);
+            _mushroomMachine.SetActive(true);
+            _thanosMachine.SetActive(false);
+            
         }
-        _mushroomMachine.SetActive(true);
-        _thanosMachine.SetActive(false);
     }
 
     public void SlowTransition(){

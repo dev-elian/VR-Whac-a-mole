@@ -9,7 +9,7 @@ public class MachineDetectable : MonoBehaviour
 
     Hammer _hammer;
     void OnTriggerEnter(Collider other) {
-        if (other.tag == Tags.Weapon){
+        if (other.tag == Tags.Weapon){//&&manager
             if (other.GetComponentInParent<Hammer>().CanCollide){
                 ScoreManager.instance.DecreaseScore(_penaltyPointsPerStroke);
                 _sound.Play();

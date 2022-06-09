@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
 
     //CLEAR DEBUG
     void Start() {
-        PlayerPrefs.SetInt("_maxScore", 0);
-        PlayerPrefs.Save();
+        // PlayerPrefs.SetInt("_maxScore", 0);
+        // PlayerPrefs.Save();
         // StartGame();
         // Time.timeScale = 3;
     }

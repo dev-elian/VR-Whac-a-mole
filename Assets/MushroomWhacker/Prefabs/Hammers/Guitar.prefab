@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 7971975378374398585}
   - component: {fileID: 7971975378374398587}
   - component: {fileID: 7971975378374398586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guitar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

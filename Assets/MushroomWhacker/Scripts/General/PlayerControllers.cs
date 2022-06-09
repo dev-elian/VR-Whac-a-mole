@@ -26,6 +26,10 @@ public class PlayerControllers : MonoBehaviour
     [SerializeField] InputAction _showSelection;
     public Action<bool> onShowSelection;
 
+    [Header("Change Machine")]
+    [SerializeField] InputAction _changeMachine;
+    public Action onChangeMachine;
+
     void Awake() {
         if (instance != null && instance != this) 
             Destroy(this); 
@@ -40,18 +44,22 @@ public class PlayerControllers : MonoBehaviour
 
         _showSelection.performed += ShowSelection;
         _showSelection.canceled += ShowSelection;
+
+        _changeMachine.performed += ChangeMachine;
     }
 
     void OnEnable() {
         _horizontalSelection.Enable();
         _accept.Enable();
         _showSelection.Enable();
+        _changeMachine.Enable();
     }
 
     void OnDisable() {
         _horizontalSelection.Disable();
         _accept.Disable();
         _showSelection.Disable();
+        _changeMachine.Disable();
     }
 
     void Select(InputAction.CallbackContext context){
@@ -76,4 +84,10 @@ public class PlayerControllers : MonoBehaviour
         if (onShowSelection != null)
             onShowSelection(context.ReadValue<float>()>JOYSTICK_THRESHOLD);
     }
+
+    void ChangeMachine(InputAction.CallbackContext context){
+        if (onChangeMachine != null)
+            onChangeMachine();
+    }
+
 }
