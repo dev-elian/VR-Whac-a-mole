@@ -26,22 +26,21 @@ public class Hammer : MonoBehaviour
                     _canCollide=true;
                     break;
                 case Tags.Enemy:
-                    // _mesh.material = _disabled;
-                    _canCollide=false;
-                    StartCoroutine(other.GetComponentInParent<Enemy>().PunchEnemy());
+                    if (CanCollide){
+                        // _mesh.material = _disabled;
+                        _canCollide=false;
+                        StartCoroutine(other.GetComponentInParent<Enemy>().PunchEnemy());
+                    }
                     break;
                 case Tags.Machine:
-                    // _mesh.material = _disabled;
-                    _canCollide=false;
+                    if (CanCollide){
+                        // _mesh.material = _disabled;
+                        _canCollide=false;
+                    }
                     break;
                 default:
                     break;
             }
         }
-    }
-
-    IEnumerator ChangeCollide(){
-        yield return new WaitForSeconds(0.05f);
-        _canCollide=false;
     }
 }
